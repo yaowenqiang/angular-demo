@@ -6,6 +6,7 @@ gulp.task('test',function(){
 
 });
 gulp.task('html',browserSync.reload);
+gulp.task('js',browserSync.reload);
 gulp.task('serve',function(){
     browserSync.init({
     server:{
@@ -13,6 +14,7 @@ gulp.task('serve',function(){
     }
     });
     gulp.watch('*.html',['html']);
+    gulp.watch('*.js',['js']);
 });
 function log(msg) {
     if (typeof(msg) === 'object') {
